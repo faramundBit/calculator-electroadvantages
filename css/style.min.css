@@ -1,0 +1,544 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+:root {
+  --gap: .5em;
+  --index: calc(1vw + 1vh);
+  --white: #ffffff;
+  --black: #2E2E2E;
+  --grey: #D9D9D9;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 380px;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--white);
+  margin-top: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Вставка изображений любых в бокс */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Отмена выделения текта */
+* {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+h1 {
+  color: #000;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+@media (min-width: 767px) {
+  h1 {
+    text-align: left;
+  }
+}
+h2 {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 50px;
+}
+
+h3 {
+  color: #000;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 18px;
+}
+
+h4 {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Установка цвета,фона и границ в input */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #000;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px transparent;
+}
+
+input {
+  border-radius: 0;
+}
+
+/* Отмена рамки вокруг input:active в форме*/
+form * {
+  outline: none;
+  cursor: pointer;
+}
+
+/* Плавная прокрутка */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  width: 100%;
+}
+
+.container {
+  max-width: 1366px;
+  width: 100%;
+  padding: 0px 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 767px) {
+  .container {
+    padding: 0px 50px;
+  }
+}
+.visually-hidden:not(:focus):not(:active),
+input[type=checkbox].visually-hidden,
+input[type=ratio].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: insert(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+input {
+  padding: 0px 20px;
+  font-size: 120%;
+}
+
+input::placeholder {
+  font-family: inherit;
+  margin: 0;
+}
+
+.expenditure input::placeholder {
+  text-align: center;
+  padding-left: 0;
+}
+
+.expenditure input {
+  text-align: center;
+  padding-left: 30px;
+}
+
+/* Убирает синий фон при нажатии */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 50px;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 3px;
+  background: #3E8EA5;
+  box-shadow: 0px 2px 12px 1px #3E8EA5;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  transition: box-shadow 200ms ease-in-out;
+  transition: scale 200ms ease-in-out;
+}
+
+.button:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.button:hover {
+  transform: scale(1.03);
+}
+
+.form__section {
+  width: 100%;
+  background-image: url(../../img/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 30px 0 50px 0;
+  margin-bottom: 30px;
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: fs;
+  align-items: center;
+  gap: 40px;
+}
+
+.form__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
+
+@media (min-width: 767px) {
+  .form__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    gap: 30px;
+    width: 100%;
+  }
+}
+.calculator__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.distance h4 {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 767px) {
+  .distance h4 {
+    margin-bottom: 50px;
+  }
+}
+.input {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #049FEA;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.radios__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.radio__wrapper {
+  position: relative;
+  width: min-content;
+  gap: 10px;
+}
+
+.radio__wrapper {
+  position: relative;
+  width: min-content;
+  gap: 10px;
+  width: 100%;
+}
+
+.radio__wrapper label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 10px;
+}
+
+.inputs__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.input__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.input__wrapper label {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 7px;
+  padding-top: 10px;
+}
+
+.advantages {
+  margin-bottom: 30px;
+}
+
+.advantages p {
+  color: #000;
+  text-align: justify;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 143.233%;
+}
+
+/* Стили для радиокнопок */
+/* custom-input c type="radio" */
+.custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-radio + label {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* normal-radio */
+.custom-radio + label:before {
+  position: absolute;
+  top: 30px;
+  content: "";
+  display: flex;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #BFBFBF;
+  cursor: pointer;
+  -webkit-transition: 600ms;
+  -moz-transition: 600ms;
+  -ms-transition: 600ms;
+  -o-transition: 600ms;
+  transition: 600ms;
+}
+
+.custom-radio + label::after {
+  position: absolute;
+  top: 35px;
+  content: "";
+  display: flex;
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #ffffff;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -ms-transition: 200ms;
+  -o-transition: 200ms;
+  transition: 200ms;
+}
+
+/* hover-radio */
+.custom-radio:not(:disabled):not(:checked) + label:hover:before {
+  border: 1px solid #3E8EA5;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -ms-transition: 200ms;
+  -o-transition: 200ms;
+  transition: 200ms;
+}
+
+/* radio checked */
+.custom-radio:checked + label::after {
+  background: #3E8EA5;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -ms-transition: 200ms;
+  -o-transition: 200ms;
+  transition: 200ms;
+}
+
+.custom-radio:checked + label::before {
+  border: 1px solid #3E8EA5;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -ms-transition: 200ms;
+  -o-transition: 200ms;
+  transition: 200ms;
+}
+
+/* radio active */
+.custom-radio:active + label::before {
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -ms-transition: 200ms;
+  -o-transition: 200ms;
+  transition: 200ms;
+}
+
+.chart {
+  width: 100%;
+  margin-bottom: 50px;
+  display: none;
+}
+
+.chart.active {
+  display: flex;
+}
+
+.chart .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.chart__wrapper {
+  width: 100%;
+}
+
+#chartContainerElectro,
+#chartContainerFuel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+}
+
+@media (min-width: 767px) {
+  .chart .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+}
+#chartContainerElectro:before,
+#chartContainerFuel:before {
+  content: attr(data-chart-y);
+  position: absolute;
+  top: -25px;
+  left: 30px;
+  font: 16px/25px Montserrat, sans-serif;
+  z-index: 1;
+  color: #787878;
+}
+
+#chartContainerElectro:after,
+#chartContainerFuel:after {
+  content: attr(data-chart-x);
+  position: absolute;
+  bottom: 20px;
+  right: -30px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font: 16px/25px Montserrat, sans-serif;
+  z-index: 1;
+  color: #787878;
+}
+
+.canvasjs-chart-credit {
+  display: none;
+}
+/*# sourceMappingURL=style.min.css.map */

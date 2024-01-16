@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, width=device-width">
+  <meta name="referrer" content="no-referrer">
+  <title>Калькулятор calculator.electrocar</title>
+
+  <link rel="stylesheet" href="css/style.min.css?v=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+
+<body class="body" id="main">
+  <main class="main">
+
+    <section class="form__section">
+      <div class="container">
+        <h1>Расчет топлива</h1>
+        <h2>Рассчитайте вашу выгоду</h2>
+        <form id="calculator">
+
+          <div class="form__wrapper">
+            <div class="distance calculator__item">
+              <h4>Количество километров в день</h4>
+              <label for="distance"></label>
+              <input type="number" class="input" id="distance" placeholder="Введите ваш километраж">
+            </div>
+
+            <div class="expenditure calculator__item">
+              <h4>Средний расход (на 100 км)</h4>
+              <svg width="50%" viewBox="0 0 301 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="8.5" x2="301" y2="8.5" stroke="#3E8EA5" />
+                <line x1="150.651" y1="8" x2="150.651" y2="2.08392e-08" stroke="#3E8EA5" />
+                <line x1="0.548767" y1="16" x2="0.548767" y2="8" stroke="#3E8EA5" />
+                <line x1="300.5" y1="16" x2="300.5" y2="8" stroke="#3E8EA5" />
+              </svg>
+              <div class="inputs__wrapper">
+                <div class="input__wrapper">
+                  <label for="fuel">Топливо</label>
+                  <input type="number" class="input" id="fuel" name="fuel-expenditure" placeholder="10">
+                </div>
+                <div class="input__wrapper">
+                  <label for="electricity">Электричество</label>
+                  <input type="number" class="input" id="electricity" name="electricity-expenditure" placeholder="18">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__wrapper">
+            <div class="type__fuel calculator__item">
+              <h4>Вид топлива</h4>
+              <svg width="85%" viewBox="0 0 441 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1" y1="8.5" x2="439.117" y2="8.49996" stroke="#3E8EA5" />
+                <line x1="209.842" y1="8" x2="209.842" y2="2.47432e-08" stroke="#3E8EA5" />
+                <line x1="0.5" y1="16" x2="0.5" y2="8" stroke="#3E8EA5" />
+                <line x1="88.5" y1="16" x2="88.5" y2="8" stroke="#3E8EA5" />
+                <line x1="176.5" y1="16" x2="176.5" y2="8" stroke="#3E8EA5" />
+                <line x1="264.5" y1="16" x2="264.5" y2="8" stroke="#3E8EA5" />
+                <line x1="352.5" y1="16" x2="352.5" y2="8" stroke="#3E8EA5" />
+                <line x1="440.5" y1="16" x2="440.5" y2="8" stroke="#3E8EA5" />
+              </svg>
+
+              <div class="radios__wrapper">
+                <div class="radio__wrapper">
+                  <input class="custom-radio" checked type="radio" id="fuelType92" name="fuel" value='2.26' data-type="92">
+                  <label for="fuelType92">92</label>
+                </div>
+                <div class="radio__wrapper">
+                  <input class="custom-radio" type="radio" id="fuelType95" name="fuel" value="2.36" data-type="95">
+                  <label for="fuelType95">95</label>
+                </div>
+                <div class="radio__wrapper">
+                  <input class="custom-radio" type="radio" id="fuelType98" name="fuel" value="2.58" data-type="98">
+                  <label for="fuelType98">98</label>
+                </div>
+                <div class="radio__wrapper">
+                  <input class="custom-radio" type="radio" id="fuelTypeDt" name="fuel" value="2.37" data-type="ДТ">
+                  <label for="fuelTypeDt">ДТ</label>
+                </div>
+                <div class="radio__wrapper">
+                  <input class="custom-radio" type="radio" id="fuelTypeGas" name="fuel" value="1.24" data-type="Газ">
+                  <label for="fuelTypeGas">Газ</label>
+                </div>
+                <div class="radio__wrapper">
+                  <input class="custom-radio" type="radio" id="fuelTypeAdBlue" name="fuel" value="3.20" data-type="AdBlue">
+                  <label for="fuelTypeAdBlue">AdBlue</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="type__charging calculator__item">
+              <h4>Тип зарядки</h4>
+              <svg width="50%" viewBox="0 0 301 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="8.5" x2="301" y2="8.5" stroke="#3E8EA5" />
+                <line x1="150.651" y1="8" x2="150.651" y2="2.08392e-08" stroke="#3E8EA5" />
+                <line x1="0.548767" y1="16" x2="0.548767" y2="8" stroke="#3E8EA5" />
+                <line x1="300.5" y1="16" x2="300.5" y2="8" stroke="#3E8EA5" />
+              </svg>
+
+              <div class="radios__wrapper">
+                <div class="radio__wrapper">
+                  <input class="custom-radio" checked type="radio" id="fast" name="charging" value="0.4" data-type="Медленная">
+                  <label for="fast">Переменный ток</label>
+                </div>
+                <div class="radio__wrapper">
+                  <input class="custom-radio" type="radio" id="slow" name="charging" value="0.49" data-type="Быстрая">
+                  <label for="slow">Постоянный ток</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="button btn-calculation">Рассчитать</button>
+        </form>
+      </div>
+
+    </section>
+
+    <section class="advantages">
+      <div class="container">
+        <h3>Выбирая электричество, вы экономите</h3>
+        <p>Для расчета выгоды использования электроэнергии введите в калькулятор примерное количество километров,
+          которое
+          вы проезжаете за день. Далее выберите нужный тип топлива и зарядной станции (быстрая, медленная). Обратите
+          внимание, стоимость энергии на различных зарядных станциях отличается. После ввода всех данных вы увидите два
+          сравнительных графика, которые наглядно показывают выгоду использования электричества в разрезе дневного,
+          недельного и месячного использования. Цена на топливо взята с официального сайта концерна «Белнефтехим» и
+          обновляется каждый день.
+          Стоимость услуг по зарядке электромобильного транспорта в сети ЭЗС: Услуга зарядки переменным током (AC): 0,40
+          руб./кВт*ч; Услуга зарядки постоянным током (DC): 0,49 руб./кВт*ч.</p>
+      </div>
+    </section>
+
+    <section class="chart">
+      <div class="container">
+        
+        <div class="chart__wrapper">
+          <h3>Расход топлива<br><span id="fuelTitle"></span></h3>
+          <div id="chartContainerFuel" data-chart-x="время" data-chart-y="BYN"></div>
+        </div>
+
+        <div class="chart__wrapper">
+          <h3>Расход электричества<br><span  id="electricityTitle"></span></h3>
+          <div id="chartContainerElectro" data-chart-x="время" data-chart-y="BYN"></div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.canvasjs.com/ga/canvasjs.min.js"></script>
+  <script src="js/scripts.js?v=1.0"></script>
+</body>
+
+</html>
