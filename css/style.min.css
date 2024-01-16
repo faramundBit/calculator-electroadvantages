@@ -225,7 +225,7 @@ a {
 
 .form__section {
   width: 100%;
-  background-image: url(../../img/bg2.jpg);
+  background-image: url(../img/bg2.jpg);
   background-size: cover;
   background-position: center;
   padding: 30px 0 50px 0;
